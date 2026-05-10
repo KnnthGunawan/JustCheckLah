@@ -1,4 +1,4 @@
-# SchemeCheck SG
+# JustCheckLah!
 
 A production-ready web app where Singapore residents answer a guided questionnaire and see indicative eligibility for six government benefit schemes.
 
