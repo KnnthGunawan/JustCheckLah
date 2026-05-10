@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-gov-gray-50 text-gov-gray-900 antialiased; }
+  h1, h2, h3 { font-family: 'DM Serif Display', serif; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-gov-blue text-white
+    font-semibold rounded-lg transition-all duration-200 hover:bg-gov-navy
+    active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gov-blue
+    font-semibold rounded-lg border border-gov-blue transition-all duration-200
+    hover:bg-gov-lightblue active:scale-[0.98];
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-card p-6 border border-gov-gray-100;
+  }
+  .form-label {
+    @apply block text-sm font-semibold text-gov-gray-700 mb-2;
+  }
+  .form-select {
+    @apply w-full px-4 py-3 rounded-lg border border-gov-gray-300 bg-white text-gov-gray-900
+    focus:outline-none focus:ring-2 focus:ring-gov-blue focus:border-transparent transition-shadow;
+  }
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-gov-gray-300 bg-white text-gov-gray-900
+    focus:outline-none focus:ring-2 focus:ring-gov-blue focus:border-transparent transition-shadow;
+  }
+  .badge-eligible {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold
+    bg-emerald-100 text-emerald-800 border border-emerald-200;
+  }
+  .badge-possible {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold
+    bg-amber-100 text-amber-800 border border-amber-200;
+  }
+  .badge-not {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold
+    bg-red-100 text-red-800 border border-red-200;
+  }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-in { animation: slideInUp 0.3s ease-out forwards; }
+
+.gov-bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230D2B4E' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+}
