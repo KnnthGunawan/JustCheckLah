@@ -30,7 +30,6 @@ app.add_middleware(
         "http://127.0.0.1:3000",
         "https://justchecklah.com",
         "https://www.justchecklah.com",
-        "https://schemecheck-sg.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
