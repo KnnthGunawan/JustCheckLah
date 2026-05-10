@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SchemeCheck SG",
+  title: "JustCheckLah!",
   description: "Check your eligibility for Singapore government benefit schemes quickly and easily.",
 };
 

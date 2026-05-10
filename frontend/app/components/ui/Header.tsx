@@ -10,10 +10,10 @@ export default function Header() {
           </div>
           <div>
             <p className="text-xs text-gov-gray-300 font-medium tracking-widest uppercase">
-              Singapore Government
+              Singapore Government Benefits Checker
             </p>
             <p className="text-white font-semibold text-sm leading-tight group-hover:text-gov-gray-300 transition-colors">
-              SchemeCheck SG
+              JustCheckLah!
             </p>
           </div>
         </Link>
