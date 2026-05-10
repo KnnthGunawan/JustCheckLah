@@ -100,7 +100,7 @@ export function getApiErrorMessage(error: unknown): string {
   }
 
   if (!error.response) {
-    return "Could not reach the server. Please make sure the backend is running on port 8000.";
+  return "Could not reach the deployed backend. Check NEXT_PUBLIC_API_URL, backend deployment status, and CORS settings.";  
   }
 
   if (error.response.status === 422) {
