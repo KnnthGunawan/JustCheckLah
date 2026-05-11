@@ -7,6 +7,7 @@ import Header from "../components/ui/Header";
 import StepIndicator from "../components/ui/StepIndicator";
 import { evaluateEligibility, getApiErrorMessage } from "../../lib/api";
 import type { UserResponse } from "../../lib/api";
+import { saveEligibilityResults } from "../../lib/resultsStore";
 
 const CITIZENSHIP_OPTIONS = [
   "Singapore Citizen",
@@ -324,7 +325,7 @@ export default function CheckPage() {
     try {
       const payload: UserResponse = { ...form };
       const results = await evaluateEligibility(payload);
-      sessionStorage.setItem("eligibility_results", JSON.stringify(results));
+      saveEligibilityResults(results);
       router.push("/results");
     } catch (err) {
       setError(getApiErrorMessage(err));

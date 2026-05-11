@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Header from "../components/ui/Header";
 import type { EvaluationResponse, EligibilityResult } from "../../lib/api";
+import { loadEligibilityResults } from "../../lib/resultsStore";
 
 function Stat({ value, label, color }: { value: number; label: string; color: string }) {
   return (
@@ -66,8 +67,7 @@ export default function ResultsPage() {
   const [results, setResults] = useState<EvaluationResponse | null>(null);
 
   useEffect(() => {
-    const raw = sessionStorage.getItem("eligibility_results");
-    if (raw) setResults(JSON.parse(raw));
+    setResults(loadEligibilityResults());
   }, []);
 
   if (!results) {
